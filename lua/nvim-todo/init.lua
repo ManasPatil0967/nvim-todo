@@ -225,12 +225,12 @@ function nvim_todo.Close_remove()
 end
 
 function nvim_todo.Set_keymaps()
-    vim.api.nvim_set_keymap('n', '<leader>ta', ':lua require("nvim_todo").Add_to_list()<CR>', {noremap = true, silent = true})
-    vim.api.nvim_set_keymap('n', '<leader>tr', ':lua require("nvim_todo").Remove_from_list()<CR>', {noremap = true, silent = true})
-    vim.api.nvim_set_keymap('n', '<CR>', ':lua require("nvim_todo").Close_input()<CR>', {noremap = true, silent = true})
-    vim.api.nvim_set_keymap('n', '<Esc>', ':lua require("nvim_todo").Close_popup()<CR>', {noremap = true, silent = true})
-    vim.api.nvim_set_keymap('n', '<leader>tl', ':lua require("nvim_todo").Read_list()<CR>', {noremap = true, silent = true})
-    vim.api.nvim_set_keymap('n', '<CR>', ':lua require("nvim_todo").Close_remove()<CR>', {noremap = true, silent = true})
+    vim.api.nvim_set_keymap('n', '<leader>ta', ':lua require("nvim-todo").Add_to_list()<CR>', {noremap = true, silent = true})
+    vim.api.nvim_set_keymap('n', '<leader>tr', ':lua require("nvim-todo").Remove_from_list()<CR>', {noremap = true, silent = true})
+    vim.api.nvim_set_keymap('n', '<CR>', ':lua require("nvim-todo").Close_input()<CR>', {noremap = true, silent = true})
+    vim.api.nvim_set_keymap('n', '<Esc>', ':lua require("nvim-todo").Close_popup()<CR>', {noremap = true, silent = true})
+    vim.api.nvim_set_keymap('n', '<leader>tl', ':lua require("nvim-todo").Read_list()<CR>', {noremap = true, silent = true})
+    vim.api.nvim_set_keymap('n', '<CR>', ':lua require("nvim-todo").Close_remove()<CR>', {noremap = true, silent = true})
 end
 
 nvim_todo.Set_keymaps()
