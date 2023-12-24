@@ -3,7 +3,12 @@ An extremely simple To-Do list plugin for Neovim. \
 I made this plugin for the sole purpose of understanding UIs for plugins in Neovim as also Lua syntax. \
 You can use this plugin directly in Neovim using Packer as
 ```lua
-use('ManasPatil0967/nvim-todo')
+use {
+    'ManasPatil0967/nvim-todo',
+    requires = {
+    { 'MunifTanjim/nui.nvim' }
+    }
+}
 ```
 Thereafter simply run the Set_keymaps function to set keymaps as I've coded them. \
 ```lua 
