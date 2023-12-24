@@ -50,7 +50,7 @@ local input = Input({
     end,
     on_submit = function(text)
         TodoList:add(text)
-        local file = io.open(current_path .. "todo.txt", "r+")
+        local file = io.open(current_path .. "todo.txt", "a+")
         if file == nil then
             print("File not found")
             return
@@ -93,7 +93,7 @@ end
 
 function nvim_todo.Read_list()
     Todo = {}
-    local file = io.open(current_path .. "todo.txt", "r+")
+    local file = io.open(current_path .. "todo.txt", "a+")
     if file == nil then
         print("96: File not found")
         return
@@ -148,7 +148,7 @@ local input_remove = Input({
         for i in string.gmatch(text, "%S+") do
             table.insert(a, tonumber(i))
         end
-        local file1 = io.open(current_path .. "todo.txt", "r+")
+        local file1 = io.open(current_path .. "todo.txt", "a+")
         local lines = {}
         if file1 == nil then
             print("163: File not found")
@@ -199,7 +199,7 @@ local layout = Layout({
 function nvim_todo.Remove_from_list()
     local todoList = {}
 
-    local file_name = io.open(current_path .. "todo.txt", "r+")
+    local file_name = io.open(current_path .. "todo.txt", "a+")
     if file_name == nil then
         print("127: File not found")
         return
